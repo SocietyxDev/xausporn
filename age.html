@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            color: #ff9800;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Age Verification</h1>
+        <p class="warning">You must be 18+ to access this site.</p>
+        <p>This website contains adult content and is intended only for those who are legally permitted to view such material in their jurisdiction.</p>
+        <p>Xaus does not store any files on our servers. We only provide links to media that is hosted on third-party services.</p>
+        <p>If you are under 18 or such content is prohibited in your area, please leave immediately.</p>
+        <p>By clicking "Enter", you confirm that you are 18 or older and accept responsibility for accessing this content.</p>
+
+        <div class="buttons">
+            <button onclick="verifyAge()">Enter</button>
+            <button onclick="window.location.href='https://www.google.com'">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        function verifyAge() {
+            localStorage.setItem("verified", "true");
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
